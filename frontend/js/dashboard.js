@@ -70,12 +70,12 @@ function displayServers(guilds) {
                     <div class="mt-2">
                         ${!guild.botInstalled ? 
                             `<button class="btn btn-primary btn-sm install-bot w-100 mb-2">
-                                ➕ Install Bot
+                                 Install Bot
                             </button>` : ''
                         }
                         <button class="btn btn-outline-primary btn-sm configure-bot w-100" 
                                 ${!guild.botInstalled ? 'disabled' : ''}>
-                            ⚙️ Configure Bot
+                             Configure Bot
                         </button>
                     </div>
                 </div>
@@ -134,7 +134,7 @@ async function openConfigModal(guildId, guildName) {
     
     const modalTitle = modalElement.querySelector('.modal-title');
     if (modalTitle) {
-        modalTitle.textContent = `⚙️ Configure Bot for ${guildName}`;
+        modalTitle.textContent = ` Configure Bot for ${guildName}`;
     }
     
     const modal = new bootstrap.Modal(modalElement);

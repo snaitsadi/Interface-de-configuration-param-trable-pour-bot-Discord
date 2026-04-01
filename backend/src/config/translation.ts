@@ -6,7 +6,7 @@ class LocalTranslationAI {
   private cache: Map<string, TranslationCache> = new Map();
   
   constructor() {
-    console.log('🤖 Local Translation AI initialized');
+    console.log(' Local Translation AI initialized');
   }
   
   async translate(text: string, targetLang: string, sourceLang: string = 'en'): Promise<string> {
@@ -38,7 +38,7 @@ class LocalTranslationAI {
       'Select the channel where welcome messages will be sent': 'Sélectionnez le canal où les messages de bienvenue seront envoyés',
       'Welcome Message': 'Message de bienvenue',
       'Message to send when a new member joins': 'Message à envoyer quand un nouveau membre rejoint',
-      'Welcome to the server! 🎉': 'Bienvenue sur le serveur ! 🎉',
+      'Welcome to the server! ': 'Bienvenue sur le serveur ! ',
       'Moderator Role': 'Rôle modérateur',
       'Role for server moderators': 'Rôle pour les modérateurs du serveur',
       'Max Warnings': 'Avertissements maximum',
@@ -61,7 +61,7 @@ class LocalTranslationAI {
       'Sélectionnez le canal où les messages de bienvenue seront envoyés': 'Select the channel where welcome messages will be sent',
       'Message de bienvenue': 'Welcome Message',
       'Message à envoyer quand un nouveau membre rejoint': 'Message to send when a new member joins',
-      'Bienvenue sur le serveur ! 🎉': 'Welcome to the server! 🎉',
+      'Bienvenue sur le serveur ! ': 'Welcome to the server! ',
       'Rôle modérateur': 'Moderator Role',
       'Rôle pour les modérateurs du serveur': 'Role for server moderators',
       'Avertissements maximum': 'Max Warnings',

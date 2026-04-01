@@ -17,13 +17,13 @@ export class ConfigHandler {
 
   constructor() {
     this.configDir = path.join(process.cwd(), '..', 'configs');
-    console.log(`📁 Config directory: ${this.configDir}`);
+    console.log(` Config directory: ${this.configDir}`);
   }
 
   async loadAllConfigs(): Promise<void> {
     try {
       if (!await fs.pathExists(this.configDir)) {
-        console.log('📁 Config directory not found, creating...');
+        console.log(' Config directory not found, creating...');
         await fs.ensureDir(this.configDir);
         return;
       }
@@ -36,7 +36,7 @@ export class ConfigHandler {
         await this.loadGuildConfig(guildId);
       }
 
-      console.log(`✅ Loaded ${this.configs.size} configurations`);
+      console.log(` Loaded ${this.configs.size} configurations`);
     } catch (error) {
       console.error('Error loading configurations:', error);
     }
@@ -48,9 +48,9 @@ export class ConfigHandler {
       if (await fs.pathExists(configPath)) {
         const config = await fs.readJson(configPath);
         this.configs.set(guildId, config);
-        console.log(`✅ Loaded config for guild ${guildId}`);
+        console.log(` Loaded config for guild ${guildId}`);
       } else {
-        console.log(`⚠️ No config found for guild ${guildId}`);
+        console.log(` No config found for guild ${guildId}`);
       }
     } catch (error) {
       console.error(`Error loading config for guild ${guildId}:`, error);
@@ -65,6 +65,6 @@ export class ConfigHandler {
     const configPath = path.join(this.configDir, `${guildId}_config.json`);
     await fs.writeJson(configPath, config, { spaces: 2 });
     this.configs.set(guildId, config);
-    console.log(`✅ Updated config for guild ${guildId}`);
+    console.log(` Updated config for guild ${guildId}`);
   }
 }

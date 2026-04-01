@@ -25,8 +25,8 @@
         "fr": "Message à envoyer quand un nouveau membre rejoint"
       },
       "default": {
-        "en": "Welcome to the server! 🎉",
-        "fr": "Bienvenue sur le serveur ! 🎉"
+        "en": "Welcome to the server! ",
+        "fr": "Bienvenue sur le serveur ! "
       },
       "required": false
     },
