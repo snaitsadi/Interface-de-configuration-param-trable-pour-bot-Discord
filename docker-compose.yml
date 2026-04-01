@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend/configs:/app/configs
+      - ./backend/uploads:/app/uploads
+
+  bot:
+    build: ./bot
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - ./bot/.env
+    volumes:
+      - ./backend/configs:/app/configs
+    depends_on:
+      - backend
+
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+    depends_on:
+      - backend
