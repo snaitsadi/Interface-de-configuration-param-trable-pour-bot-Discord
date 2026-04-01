@@ -1,5 +1,4 @@
 # Interface-de-configuration-param-trable-pour-bot-Discord
- Sujet de projet PFE 2025-2026:
 Interface de configuration paramétrable pour bot Discord
 proposé par David Auber
 
