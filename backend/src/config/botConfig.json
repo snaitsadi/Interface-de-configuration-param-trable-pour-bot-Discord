@@ -1,0 +1,107 @@
+{
+  "parameters": [
+    {
+      "id": "welcome_channel",
+      "type": "forum",
+      "label": {
+        "en": "Welcome Channel",
+        "fr": "Canal de bienvenue"
+      },
+      "description": {
+        "en": "Select the channel where welcome messages will be sent",
+        "fr": "Sélectionnez le canal où les messages de bienvenue seront envoyés"
+      },
+      "required": true
+    },
+    {
+      "id": "welcome_message",
+      "type": "text",
+      "label": {
+        "en": "Welcome Message",
+        "fr": "Message de bienvenue"
+      },
+      "description": {
+        "en": "Message to send when a new member joins",
+        "fr": "Message à envoyer quand un nouveau membre rejoint"
+      },
+      "default": {
+        "en": "Welcome to the server! 🎉",
+        "fr": "Bienvenue sur le serveur ! 🎉"
+      },
+      "required": false
+    },
+    {
+      "id": "mod_role",
+      "type": "role",
+      "label": {
+        "en": "Moderator Role",
+        "fr": "Rôle modérateur"
+      },
+      "description": {
+        "en": "Role for server moderators",
+        "fr": "Rôle pour les modérateurs du serveur"
+      },
+      "required": true
+    },
+    {
+      "id": "max_warnings",
+      "type": "number",
+      "label": {
+        "en": "Max Warnings",
+        "fr": "Avertissements maximum"
+      },
+      "description": {
+        "en": "Maximum warnings before action",
+        "fr": "Avertissements maximum avant action"
+      },
+      "min": 1,
+      "max": 10,
+      "default": 3,
+      "required": false
+    },
+    {
+      "id": "admin_user",
+      "type": "user",
+      "label": {
+        "en": "Administrator User",
+        "fr": "Utilisateur administrateur"
+      },
+      "description": {
+        "en": "User with admin privileges",
+        "fr": "Utilisateur avec privilèges administrateur"
+      },
+      "required": false
+    },
+    {
+      "id": "server_title",
+      "type": "title",
+      "label": {
+        "en": "Server Title",
+        "fr": "Titre du serveur"
+      },
+      "description": {
+        "en": "Custom title for the server",
+        "fr": "Titre personnalisé pour le serveur"
+      },
+      "default": {
+        "en": "My Discord Server",
+        "fr": "Mon serveur Discord"
+      },
+      "required": false
+    },
+    {
+      "id": "server_icon",
+      "type": "image",
+      "label": {
+        "en": "Server Icon",
+        "fr": "Icône du serveur"
+      },
+      "description": {
+        "en": "Custom icon for the server",
+        "fr": "Icône personnalisée pour le serveur"
+      },
+      "required": false,
+      "accept": "image/*"
+    }
+  ]
+}
